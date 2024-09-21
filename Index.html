@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOW DO I LOOK?</title>
+    <!-- CSS 파일 링크 -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <!-- 첫 번째 화면 -->
+    <div id="screen1" class="screen">
+        <div class="screen1-container">
+            <!-- 왼쪽 절반: 캐릭터 -->
+            <div class="left-side">
+                <img id="character1" src="images/character_base.png" alt="캐릭터">
+            </div>
+            <!-- 오른쪽 절반 -->
+            <div class="right-side">
+                <!-- 오른쪽 위: 말풍선 -->
+                <div class="speech-bubble">HOW DO I LOOK?</div>
+                <!-- 오른쪽 아래: 게임 시작 버튼 -->
+                <button id="start-game-btn" class="start-button">START</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 두 번째 화면 -->
+    <div id="screen2" class="screen hidden">
+        <div class="main-container">
+            <!-- 왼쪽: 캐릭터 영역 -->
+            <div class="character-container">
+                <img id="character" src="images/character_base.png" alt="캐릭터">
+                <img id="top-image" src="" alt="상의" class="top-clothes">
+            </div>
+
+            <!-- 오른쪽: 말풍선 영역 -->
+            <div class="right-side">
+                <div class="speech-bubble" id="color-speech-bubble">
+                    상의와 색상을 선택하세요!
+                </div>
+                <div class="selection-container">
+                    <!-- 상의 선택 -->
+                    <div class="form-group">
+                        <label for="top">상의 종류:</label>
+                        <select id="top"> <!--드롭다운 목록-->
+                            <option value="t-shirt">티셔츠</option>
+                            <option value="shirt">셔츠</option>
+                            <option value="sweater">니트</option>
+                        </select>
+                    </div>
+
+                    <!-- 색상 선택 팔레트 -->
+                    <div class="color-palette">
+                        <h3>색상 선택:</h3>
+                        <div class="color-options">
+                            <div class="color-box" data-color="#ff0000" style="background-color: #ff0000;"></div>
+                            <div class="color-box" data-color="#00ff00" style="background-color: #00ff00;"></div>
+                            <div class="color-box" data-color="#0000ff" style="background-color: #0000ff;"></div>
+                            <div class="color-box" data-color="#000000" style="background-color: #000000;"></div>
+                            <div class="color-box" data-color="#ffffff" style="background-color: #ffffff;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
